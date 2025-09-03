@@ -1,0 +1,46 @@
+.player {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #181818;
+  border-top: 1px solid #282828;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.song-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.player-controls {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.player-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.volume-control {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.volume-control input {
+  width: 100px;
+}
