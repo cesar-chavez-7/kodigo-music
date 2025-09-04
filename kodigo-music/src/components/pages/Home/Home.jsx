@@ -1,7 +1,6 @@
 import './Home.css'
 
 const Home = () => {
-  // Datos de ejemplo (luego puedes reemplazar con una API real)
   const featuredPlaylists = [
     {
       id: 1,

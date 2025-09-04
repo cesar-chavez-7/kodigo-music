@@ -14,12 +14,6 @@ const Header = () => {
           Inicio
         </Link>
         <Link 
-          to="/library" 
-          className={location.pathname === '/library' ? 'active' : ''}
-        >
-          Mi Biblioteca
-        </Link>
-        <Link 
           to="/search" 
           className={location.pathname === '/search' ? 'active' : ''}
         >

@@ -6,7 +6,6 @@ const Search = () => {
   
   const onSubmit = (data) => {
     console.log(data)
-    // Aquí implementarías la búsqueda real
     alert(`Buscando: ${data.searchQuery}`)
   }
 
@@ -32,11 +31,9 @@ const Search = () => {
       {errors.searchQuery && <span className="error">{errors.searchQuery.message}</span>}
       
       <div className="search-results">
-        {/* Aquí irían los resultados de búsqueda */}
         <p>Utiliza el formulario para buscar música.</p>
       </div>
 
-      {/* Formulario de contacto (para cumplir con el requisito) */}
       <div className="contact-section">
         <h3>Formulario de Contacto</h3>
         <ContactForm />
@@ -45,7 +42,6 @@ const Search = () => {
   )
 }
 
-// Componente de formulario de contacto
 const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm()
   
@@ -61,11 +57,7 @@ const ContactForm = () => {
         <input
           type="text"
           {...register("name", { 
-            required: "El nombre es obligatorio",
-            pattern: {
-              value: /^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$/,
-              message: "El nombre solo debe contener letras"
-            }
+            required: "El nombre es obligatorio"
           })}
         />
         {errors.name && <span className="error">{errors.name.message}</span>}
@@ -76,11 +68,7 @@ const ContactForm = () => {
         <input
           type="email"
           {...register("email", { 
-            required: "El email es obligatorio",
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "El formato del email no es válido"
-            }
+            required: "El email es obligatorio"
           })}
         />
         {errors.email && <span className="error">{errors.email.message}</span>}
@@ -90,11 +78,7 @@ const ContactForm = () => {
         <label>Mensaje:</label>
         <textarea
           {...register("message", { 
-            required: "El mensaje es obligatorio",
-            minLength: {
-              value: 10,
-              message: "El mensaje debe tener al menos 10 caracteres"
-            }
+            required: "El mensaje es obligatorio"
           })}
         ></textarea>
         {errors.message && <span className="error">{errors.message.message}</span>}
